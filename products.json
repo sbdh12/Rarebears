@@ -1,0 +1,138 @@
+{
+  "diwali": [
+    {
+      "id": 1,
+      "name": "Aurora Bloom",
+      "description": "A luminous collectible bear, crafted to embody the sparkle of Diwali nights. Each detail reflects festive elegance, making it a centerpiece for collectors.",
+      "price": "₹21,000",
+      "image": "assets/img/diwali-1.jpg",
+      "limited": 40
+    },
+    {
+      "id": 2,
+      "name": "Twilight Ember",
+      "description": "A doll inspired by the soft glow of evening lights. With graceful finishes and timeless charm, it captures the warmth of celebration.",
+      "price": "₹23,500",
+      "image": "assets/img/diwali-2.jpg",
+      "limited": 40
+    },
+    {
+      "id": 3,
+      "name": "Celestia Glow",
+      "description": "A radiant teddy that symbolizes joy and prosperity. Designed as a rare keepsake, it blends modern luxury with festive spirit.",
+      "price": "₹25,000",
+      "image": "assets/img/diwali-3.jpg",
+      "limited": 40
+    },
+    {
+      "id": 4,
+      "name": "Eterna Flame",
+      "description": "A doll that echoes the eternal light of Diwali. Limited to just 40 pieces, it’s a festival treasure for true connoisseurs.",
+      "price": "₹28,000",
+      "image": "assets/img/diwali-4.jpg",
+      "limited": 40
+    }
+  ],
+  "christmas": [
+    {
+      "id": 1,
+      "name": "Snowlume",
+      "description": "A snowy-white teddy with shimmering silver accents, symbolizing winter purity and festive charm. An ultra-rare holiday keepsake for collectors worldwide.",
+      "price": "₹22,000",
+      "image": "assets/img/christmas-1.jpg",
+      "limited": 40
+    },
+    {
+      "id": 2,
+      "name": "Crimson Frost",
+      "description": "A deep crimson doll with frosted detailing, embodying warmth in the cold season. A timeless collectible that radiates festive elegance.",
+      "price": "₹24,500",
+      "image": "assets/img/christmas-2.jpg",
+      "limited": 40
+    },
+    {
+      "id": 3,
+      "name": "Everglow",
+      "description": "A premium teddy inspired by evergreen pines and golden lights. Designed to capture the cozy, magical essence of Christmas nights.",
+      "price": "₹27,000",
+      "image": "assets/img/christmas-3.jpg",
+      "limited": 40
+    },
+    {
+      "id": 4,
+      "name": "Starlace",
+      "description": "A doll adorned with star-inspired patterns, representing holiday wonder and celestial beauty. Each piece is delicately finished for a truly premium look.",
+      "price": "₹29,500",
+      "image": "assets/img/christmas-4.jpg",
+      "limited": 40
+    }
+  ],
+  "halloween": [
+    {
+      "id": 1,
+      "name": "Midnight Whisper",
+      "description": "A deep charcoal teddy with subtle glowing accents, evoking the mystery of Halloween nights. A rare piece that blends elegance with a touch of spook.",
+      "price": "₹22,500",
+      "image": "assets/img/halloween-1.jpg",
+      "limited": 40
+    },
+    {
+      "id": 2,
+      "name": "Moonveil",
+      "description": "A soft-toned doll inspired by the pale glow of a full moon. Minimal yet enchanting, designed for collectors who love refined seasonal rarities.",
+      "price": "₹25,000",
+      "image": "assets/img/halloween-2.jpg",
+      "limited": 40
+    },
+    {
+      "id": 3,
+      "name": "Shadow Ember",
+      "description": "A premium teddy in dusky tones with ember-like highlights, symbolizing the flicker of Halloween lanterns. Exclusive, hauntingly beautiful.",
+      "price": "₹27,500",
+      "image": "assets/img/halloween-3.jpg",
+      "limited": 40
+    },
+    {
+      "id": 4,
+      "name": "Eclipse Charm",
+      "description": "A doll with dark elegance, accented by subtle metallic finishes. Represents the rare magic of an eclipse — a true centerpiece collectible.",
+      "price": "₹30,000",
+      "image": "assets/img/halloween-4.jpg",
+      "limited": 40
+    }
+  ],
+  "newyear": [
+    {
+      "id": 1,
+      "name": "Luminara",
+      "description": "A radiant teddy that embodies the brilliance of fireworks and the spirit of new beginnings. A glowing collectible to welcome the year in style.",
+      "price": "₹23,000",
+      "image": "assets/img/newyear-1.jpg",
+      "limited": 40
+    },
+    {
+      "id": 2,
+      "name": "Aurelia",
+      "description": "A doll with golden finishes, crafted to symbolize prosperity and celebration. Refined and timeless, made for collectors of elegance.",
+      "price": "₹26,000",
+      "image": "assets/img/newyear-2.jpg",
+      "limited": 40
+    },
+    {
+      "id": 3,
+      "name": "Vespera",
+      "description": "A deep-toned teddy with sleek accents, inspired by midnight countdowns and sparkling skies. A limited piece that defines festive luxury.",
+      "price": "₹28,500",
+      "image": "assets/img/newyear-3.jpg",
+      "limited": 40
+    },
+    {
+      "id": 4,
+      "name": "Eterna Nova",
+      "description": "A premium doll representing renewal and everlasting charm. Designed as a collector’s jewel to mark the transition into a brighter future.",
+      "price": "₹32,000",
+      "image": "assets/img/newyear-4.jpg",
+      "limited": 40
+    }
+  ]
+}

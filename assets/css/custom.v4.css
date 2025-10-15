@@ -1,0 +1,303 @@
+/* assets/css/custom.v4.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #FAF9F8; /* Consistent premium background */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+}
+
+p, h1, h2, h3, h4, h5, h6, span, a, input, textarea {
+    -webkit-user-select: text; /* Safari */
+    -ms-user-select: text; /* IE 10+ */
+    user-select: text; /* Standard syntax */
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 3;
+    max-width: 600px;
+    padding: 0 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1.2s ease 0.5s forwards;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #8b5a8c;
+    margin-bottom: 20px;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.hero h1 .luxury {
+    font-style: italic;
+    color: #d4669c;
+    font-weight: 400;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    color: #6b5b73;
+    margin-bottom: 35px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.cta-button, #add-to-cart-btn, #add-to-wishlist-btn, #checkout-btn, #pay-now-btn, .secondary-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before, #add-to-cart-btn::before, #add-to-wishlist-btn::before, #checkout-btn::before, #pay-now-btn::before, .secondary-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.6s;
+}
+
+.cta-button:hover::before, #add-to-cart-btn:hover::before, #add-to-wishlist-btn:hover::before, #checkout-btn:hover::before, #pay-now-btn:hover::before, .secondary-button:hover::before {
+    left: 100%;
+}
+
+
+.cta-button {
+    display: inline-block;
+    padding: 18px 40px;
+    background: linear-gradient(45deg, #d4669c, #a855a0);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 25px rgba(212, 102, 156, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(212, 102, 156, 0.4);
+}
+
+.secondary-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #FFFFFF;
+    color: #374151;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.secondary-button:hover {
+    background-color: #FDFCFB;
+    border-color: #D4AF37;
+    color: #111827;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.card {
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(212, 102, 156, 0.4);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.6s;
+}
+
+.card:hover::before {
+    left: 100%;
+}
+
+.floating-bear {
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('../img/hero.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4; /* Set desktop opacity to 40% */
+    animation: floatIn 1.5s ease 0.5s forwards, float 8s ease-in-out infinite 2s;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.floating-bear::before, .floating-bear::after {
+    content: none;
+}
+
+.background-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    animation: slowFloat 15s ease-in-out infinite;
+}
+
+.bg-circle:nth-child(1) {
+    width: 200px;
+    height: 200px;
+    background: #d4669c;
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.bg-circle:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    background: #a855a0;
+    bottom: 15%;
+    left: 10%;
+    animation-delay: 2s;
+}
+
+.bg-circle:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    background: #f8e8f0;
+    top: 20%;
+    right: 15%;
+    animation-delay: 4s;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatIn {
+    to {
+        opacity: 0.4; /* Ensure floatIn animation ends at 40% */
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(-50%) rotate(3deg); }
+    50% { transform: translateY(-55%) rotate(-3deg); }
+}
+
+@keyframes slowFloat {
+    0%, 100% { transform: translateY(0px) translateX(0px); }
+    25% { transform: translateY(-20px) translateX(10px); }
+    50% { transform: translateY(10px) translateX(-15px); }
+    75% { transform: translateY(-10px) translateX(20px); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 150px 20px 80px;
+        min-height: 70vh;
+        flex-direction: column;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        animation: none;
+        opacity: 1;
+        transform: none;
+        position: relative;
+        z-index: 5;
+    }
+
+    .floating-bear {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        right: auto;
+        opacity: 0.1;
+        z-index: 1;
+        animation: float 12s ease-in-out infinite;
+    }
+    
+    .collections-section {
+        margin-top: 2rem;
+    }
+
+    .card {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 120px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .floating-bear {
+        width: 250px;
+        height: 250px;
+        opacity: 0.08;
+    }
+}

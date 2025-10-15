@@ -1,0 +1,29 @@
+/* Custom Notification Styles */
+#notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #212121; /* Richer dark background */
+    color: #EAEAEA; /* Desaturated off-white text */
+    padding: 12px 24px; /* Refined padding */
+    border-radius: 10px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, bottom 0.5s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-family: 'Montserrat', sans-serif;
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+#notification.show {
+    opacity: 1;
+    bottom: 40px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #notification {
+        padding: 10px 18px; /* Slightly smaller padding for smaller screens */
+    }
+}

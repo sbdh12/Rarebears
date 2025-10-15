@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+}
+
+.banner-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.banner {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.banner:hover img {
+  transform: scale(1.07);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
+}
+
+.overlay h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  margin: 0 0 0.4rem;
+  letter-spacing: 0.5px;
+}
+
+.overlay p {
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.9;
+  max-width: 80%;
+}
+
+@media (max-width: 768px) {
+  .banner-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .overlay h2 {
+    font-size: 1.4rem;
+  }
+
+  .overlay p {
+    font-size: 0.9rem;
+  }
+}

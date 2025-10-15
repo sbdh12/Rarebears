@@ -1,0 +1,37 @@
+.payment-icon {
+    width: 60px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.payment-icon:hover {
+    transform: scale(1.05);
+}
+
+.payment-icon.selected {
+    border-color: #D4AF37;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* Wallet & UPI Icons */
+.payment-icon.paytm-icon {
+    background-image: url('../images/paytm-icon.png');
+}
+
+.payment-icon.google-pay-icon {
+    background-image: url('../images/google-pay-icon.png');
+}
+
+.payment-icon.amazon-pay-icon {
+    background-image: url('../images/amazon-pay-icon.png');
+}
+
+.payment-icon.phonepe-icon {
+    background-image: url('../images/phonepe-icon.png');
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RareBears | Product Details</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="assets/css/custom.v4.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .gold-gradient {
+    color: #D4AF37;
+  }
+</style>
+</head>
+<body class="bg-gray-50">
+
+<!-- Header -->
+<header class="bg-white border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+    <a href="index.html" class="flex items-center space-x-2">
+      <h1 class="font-cormorant text-3xl sm:text-4xl font-medium text-gray-900">Rare<span class="gold-gradient">Bears</span></h1>
+      <span class="text-xs bg-black text-white px-2 py-1 rounded">EST. 2025</span>
+    </a>
+    <div class="flex items-center">
+      <!-- Desktop Menu -->
+      <nav class="hidden sm:flex space-x-6 text-gray-700 text-sm sm:text-base font-semibold items-center">
+        <a href="index.html#collections" class="hover:text-gold">Collections</a>
+        <a href="cart.html" class="hover:text-gold">Cart</a>
+      </nav>
+      <!-- Icons -->
+      <div class="flex items-center space-x-4 ml-6">
+        <a href="wishlist.html" class="relative text-gray-700 hover:text-red-500">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+          </svg>
+          <span id="wishlist-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
+        </a>
+        <a href="cart.html" class="relative text-gray-700 hover:text-gold">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+          </svg>
+          <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
+        </a>
+      </div>
+      <!-- Mobile Menu Button -->
+      <div class="sm:hidden flex items-center ml-4">
+        <button id="menu-button" class="text-gray-700 focus:outline-none">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden sm:hidden bg-white shadow-lg rounded-b-lg px-4 pb-4">
+    <a href="index.html#collections" class="block py-2 text-gray-700 font-semibold hover:text-gold">Collections</a>
+    <a href="cart.html" class="block py-2 text-gray-700 font-semibold hover:text-gold">Cart</a>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main id="product-details-container" class="max-w-4xl mx-auto my-8 sm:my-12 px-4 sm:px-6">
+  <!-- Product details will be injected here -->
+</main>
+
+<!-- Footer -->
+<footer class="border-t border-gray-200 mt-12 sm:mt-20 pt-12 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="mb-6 md:mb-0 text-center md:text-left">
+        <h3 class="font-cormorant text-2xl font-medium text-gray-900">Rare<span class="gold-gradient">Bears</span></h3>
+        <p class="text-gray-500 text-sm mt-2">Curated Luxury Collectibles</p>
+      </div>
+      <div class="flex space-x-6">
+        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="fab fa-pinterest"></i></a>
+        <a href="#" class="text-gray-500 hover:text-gray-900"><i class="far fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="mt-8 text-center text-gray-500 text-sm">
+      &copy; 2025 RareBears · All Rights Reserved
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js?v=2.1"></script>
+<script src="assets/js/cart.js?v=2.0"></script>
+<script src="assets/js/wishlist.js?v=2.0"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        renderProductDetails();
+        updateCartCount();
+
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuButton) {
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

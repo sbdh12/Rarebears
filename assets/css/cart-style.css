@@ -1,0 +1,97 @@
+/* RareBears Cart Styles - Final, Simplified & Fully Responsive */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* --- Base & Desktop Styles --- */
+
+:root {
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+    --color-gold: #D4AF37;
+    --color-dark: #111827;
+    --color-light-gray: #f9fafb;
+    --color-gray: #6b7280;
+}
+
+.gold-gradient { background: linear-gradient(90deg, #D4AF37 0%, #F4E5C2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+.cart-container { max-width: 1200px; margin: 3rem auto; padding: 0 1.5rem; }
+.cart-header { text-align: center; margin-bottom: 3rem; }
+.cart-header h1 { font-family: var(--font-serif); font-size: 2.8rem; color: #333; font-weight: 500; }
+.cart-header p { color: #777; font-size: 1.1rem; font-family: var(--font-sans); }
+
+.cart-main { display: grid; grid-template-columns: 2fr 1fr; gap: 2.5rem; }
+.cart-items, .order-summary { background-color: #fff; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 25px rgba(0,0,0,0.07); }
+
+/* Items List Header */
+.cart-item-header { display: none; } /* Hidden by default, shown on desktop */
+
+/* Individual Cart Item */
+.cart-item { display: flex; gap: 1.5rem; padding: 1.5rem 0; border-bottom: 1px solid #e5e7eb; }
+.cart-item:last-child { border-bottom: none; }
+
+.item-image img { width: 100px; height: 100px; object-fit: cover; border-radius: 8px; }
+
+.item-details { flex-grow: 1; display: flex; flex-direction: column; }
+.item-details h3 { font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-dark); font-weight: 600; }
+.item-details p { color: var(--color-gray); font-size: 0.9rem; margin-bottom: auto; /* Pushes quantity to the bottom */ }
+
+.item-quantity { display: flex; align-items: center; border: 1px solid #d1d5db; border-radius: 6px; width: fit-content; margin-top: 1rem; }
+.item-quantity button { background: transparent; border: none; padding: 0.5rem 0.8rem; cursor: pointer; color: #4b5563; font-size: 1.2rem; }
+.item-quantity input { width: 40px; text-align: center; border: none; background: transparent; font-weight: 500; }
+
+.item-price-remove { text-align: right; }
+.item-price { font-family: var(--font-sans); font-weight: 600; font-size: 1.1rem; color: var(--color-dark); margin-bottom: 0.5rem; }
+.item-remove button { background: transparent; border: none; cursor: pointer; color: #9ca3af; font-size: 1rem; transition: color 0.2s ease; }
+.item-remove button:hover { color: #ef4444; }
+
+/* Order Summary */
+.order-summary { height: fit-content; }
+.order-summary h2 { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 600; margin-bottom: 1.5rem; border-bottom: 1px solid #e5e7eb; padding-bottom: 1rem; }
+.summary-row { display: flex; justify-content: space-between; margin-bottom: 1rem; font-family: var(--font-sans); color: var(--color-gray); }
+.summary-row.total { font-weight: 700; font-size: 1.2rem; color: var(--color-dark); border-top: 1px solid #e5e7eb; padding-top: 1rem; margin-top: 1rem; }
+.checkout-button { width: 100%; background-color: var(--color-dark); color: #fff; padding: 0.9rem; border: none; border-radius: 8px; font-family: var(--font-sans); font-weight: 600; font-size: 1rem; cursor: pointer; transition: background-color 0.3s ease; }
+.checkout-button:hover { background-color: #374151; }
+
+
+/* --- Media Queries --- */
+
+/* Desktop-Only Styles */
+@media (min-width: 769px) {
+    .cart-item-header { display: flex; justify-content: space-between; padding-bottom: 1rem; border-bottom: 1px solid #e5e7eb; color: #6b7280; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--font-sans);}
+    .cart-item-header .product-details { flex: 1; }
+    .cart-item-header .product-total { text-align: right; }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .cart-main { grid-template-columns: 1fr; }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column; /* Stack everything vertically */
+        align-items: center; /* Center items in the column */
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .item-details {
+        align-items: center; /* Center content (name, price, quantity) */
+        margin-bottom: 1rem;
+    }
+    
+    .item-details p { margin-bottom: 1rem; }
+
+    .item-price-remove {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        text-align: left; /* Reset text align */
+    }
+
+    .item-price { margin-bottom: 0; }
+    .item-remove { text-align: right; }
+}
